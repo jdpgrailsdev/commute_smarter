@@ -44,7 +44,7 @@ jacoco {
 }
 
 run {
-    environment = ['PORT' : project.serverPort, 'SPRING_PROFILES_ACTIVE' : 'development']
+    environment = ['PORT' : project.serverPort, 'SPRING_PROFILES_ACTIVE' : 'development', 'GOOGLE_API_KEY' : System.getenv('GOOGLE_API_KEY')]
     jvmArgs = ['-Duser.timezone=UTC', '-Dnewrelic.enable.java.8', '-XX:+UseG1GC', "-Dnewrelic.environment=${System.getenv('SPRING_PROFILES_ACTIVE') ?: 'development'}"]
     mainClassName = project.mainClass
 }
@@ -84,6 +84,7 @@ repositories {
 dependencies {
     agent "com.newrelic.agent.java:newrelic-agent:${newrelicAgentVersion}"
 
+    compile 'commons-io:commons-io:2.4'
     compile "com.newrelic.agent.java:newrelic-api:${newrelicAgentVersion}"
     compile 'javax.servlet:javax.servlet-api:3.1.0'
     compile "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"

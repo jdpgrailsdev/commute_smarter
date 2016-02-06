@@ -10,21 +10,23 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.context.embedded.jetty.JettyEmbeddedServletContainerFactory;
 import org.springframework.boot.context.embedded.jetty.JettyServerCustomizer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
+@ComponentScan(basePackages={"com.github.jdp.commute.smarter.controllers"})
 public class ApplicationConfiguration {
 
     /**
      * A Jetty HTTP server. The port is based on the PORT environment variable
-     * configured at startup, otherwise a default port of 10430 is used.
+     * configured at startup, otherwise a default port of 8080 is used.
      *
      * @param port port number
      * @return Jetty server
      */
     @Bean
-    public JettyEmbeddedServletContainerFactory jettyEmbeddedServletContainerFactory(@Value("${PORT:10430}") final String port,
+    public JettyEmbeddedServletContainerFactory jettyEmbeddedServletContainerFactory(@Value("${PORT:8080}") final String port,
             @Value("${jetty.threadPool.maxThreads:200}") final Integer maxThreads,
             @Value("${jetty.threadpool.minThreads:8}") final Integer minThreads,
             @Value("${jetty.threadpool.idleTimeout:60000}") final Integer idleTimeout) {

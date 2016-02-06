@@ -1,0 +1,37 @@
+# common ========================================================================== #
+
+---
+
+# production ========================================================================== #
+
+spring:
+  profiles: production
+
+logging:
+  level:
+    com.github.jdp: INFO
+    org.eclipse.jetty: ERROR
+    org.springframework: INFO
+---
+
+# development ========================================================================== #
+
+spring:
+  profiles: development
+
+logging:
+  level:
+    com.github.jdp: DEBUG
+    org.eclipse.jetty: ERROR
+    org.springframework: INFO
+---
+
+# test ========================================================================== #
+
+spring:
+  profiles: test
+
+logging:
+  level:
+    org.springframework: INFO
+---
