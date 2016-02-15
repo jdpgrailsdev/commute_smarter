@@ -1,0 +1,22 @@
+{
+  "name": "commute-smarter",
+  "version": "1.0.0",
+  "description": "ReactJS web application",
+  "author": "Jonathan Pearlin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdpgrailsdev/commute_smarter.git"
+  },
+  "keywords": [
+    "reactjs"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-google-maps": "^4.7.2"
+  }
+}

@@ -14,3 +14,9 @@ gradle-app.setting
 .classpath
 .project
 .settings/
+
+# NPM artifacts
+node_modules/
+
+# Browserify output
+src/main/resources/static/js/react/
