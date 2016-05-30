@@ -22,10 +22,10 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 ext {
-    jettyVersion = '9.3.7.v20160115'
-    newrelicAgentVersion = '3.25.0'
-    springBootVersion = '1.3.2.RELEASE'
-    springVersion = '4.2.4.RELEASE'
+    jettyVersion = '9.2.16.v20160414'
+    newrelicAgentVersion = '3.27.0'
+    springBootVersion = '1.3.5.RELEASE'
+    springVersion = '4.2.6.RELEASE'
     reactOutputDir = getReactOutputDir(project)
     reactSourceFiles = getReactSourceFiles(project)
 }
